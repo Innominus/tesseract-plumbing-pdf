@@ -22,7 +22,7 @@ use std::slice;
 
 /// Wrapper around [`tesseract::TessBaseAPI`](https://tesseract-ocr.github.io/tessapi/5.x/a02438.html)
 #[derive(Debug)]
-pub struct TessBaseApi(*mut tesseract_sys::TessBaseAPI);
+pub struct TessBaseApi(pub *mut tesseract_sys::TessBaseAPI);
 
 unsafe impl Send for TessBaseApi {}
 
